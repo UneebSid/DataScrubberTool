@@ -1,0 +1,182 @@
+[
+  {
+  "id": "1",
+  "firstname": "Uneeb",
+  "lastname": "Siddiqui",
+  "age": "25",
+  "email": "uu199@hdjd.com",
+  "state": "NY",
+  "city": "Queens"
+},
+{
+  "id": "2",
+  "firstname": "John",
+  "lastname": "Doe",
+  "age": "27",
+  "email": "example.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "3",
+  "firstname": "Emma",
+  "lastname": "more",
+  "age": "24",
+  "email": "example1.com",
+  "state": "Texas",
+  "city": "Dallas"
+},
+{
+  "id": "4",
+  "firstname": "Saige",
+  "lastname": "Fuentes",
+  "age": "29",
+  "email": "example2.com",
+  "state": "California",
+  "city": "Sacramento"
+},
+{
+  "id": "5",
+  "firstname": "Bowen",
+  "lastname": "Higgins",
+  "age": "32",
+  "email": "example5.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "6",
+  "firstname": "Leighton",
+  "lastname": "Kramer",
+  "age": "21",
+  "email": "example6.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "7",
+  "firstname": "Kylan",
+  "lastname": "Doe",
+  "age": "27",
+  "email": "example7.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "8",
+  "firstname": "Gentry",
+  "lastname": "Dones",
+  "age": "27",
+  "email": "example8.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "9",
+  "firstname": "Amelie",
+  "lastname": "Dosa",
+  "age": "24",
+  "email": "example9.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "10",
+  "firstname": "Griffith",
+  "lastname": "Avila",
+  "age": "34",
+  "email": "example10.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "11",
+  "firstname": "Emma",
+  "lastname": "Higgins",
+  "age": "27",
+  "email": "example11.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "12",
+  "firstname": "Amelie",
+  "lastname": "Griffith",
+  "age": "27",
+  "email": "example12.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "13",
+  "firstname": "John",
+  "lastname": "Alix",
+  "age": "33",
+  "email": "example13.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "14",
+  "firstname": "Brown",
+  "lastname": "Doe",
+  "age": "27",
+  "email": "example14.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "15",
+  "firstname": "Frank",
+  "lastname": "Lee",
+  "age": "25",
+  "email": "example15.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "16",
+  "firstname": "Johnson",
+  "lastname": "Johnson",
+  "age": "27",
+  "email": "example16.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "17",
+  "firstname": "Emily",
+  "lastname": "Doe",
+  "age": "27",
+  "email": "example17.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "18",
+  "firstname": "Harris",
+  "lastname": "Harry",
+  "age": "27",
+  "email": "example18.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "19",
+  "firstname": "Joe",
+  "lastname": "Biden",
+  "age": "27",
+  "email": "example19.com",
+  "state": "Texas",
+  "city": "Irving"
+},
+{
+  "id": "20",
+  "firstname": "Franklin",
+  "lastname": "Avila",
+  "age": "27",
+  "email": "example20.com",
+  "state": "Texas",
+  "city": "Irving"
+}
+]
