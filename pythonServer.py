@@ -38,9 +38,10 @@ if __name__ == '__main__':
 def deletePatient():
     
     data = request.get_json()
-    id = str(data)
+    id = int(data) -1
+    id = str(id)
     database.child(id).delete()
-    return jsonify({'message': 'Record deleted successfully'})
+    return jsonify({'message': ''})
 
 @app.route("/addPatient", methods=['POST'])
 def addPatient():
@@ -48,5 +49,5 @@ def addPatient():
     patients = database.get()
     patients.append(newPatient)
     database.set(patients)
-    return jsonify({'message': 'Record added successfully'})
+    return jsonify({'message': ''})
     
