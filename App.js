@@ -2,11 +2,15 @@ import { useEffect, useState } from 'react';
 import * as React from 'react'
 import {Container, Button, Table, TableBody,TableCell,tableCellClasses,TableContainer, TableHead, TableRow, Paper, Chip, TextField, Dialog, DialogTitle, DialogContent, DialogActions, TableFooter, Pagination, IconButton, TablePagination,} from "@mui/material";
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { styled } from '@mui/material/styles';
 
 import './App.css';
 
 function App() {
+
+const [originalData, setOriginalData] = useState([]);
+
 
 const [data, setData] = useState([])
 const [showForm, setShowForm] = useState(false);
@@ -49,7 +53,8 @@ useEffect(()=> {
       .then(resp=> resp.json())
       .then(resp=> 
     {console.log(resp)
-    setData(resp)})
+    setData(resp)
+    setOriginalData(resp);})
       
 },[])
 
@@ -116,69 +121,27 @@ const  onDelete = (index)=> {
   return (
     
     <div className="App">
+     
+        
     
           {
        <Container>
+         
         <h1>Data Scrubber Tool</h1>
+
           <TableContainer component={Paper} sx={{
             color:'success.main'
             }}>
           <Table sx={{ minWidth: 650}} size="small" stickyHeader aria-label="simple table">
             
              <TableHead>
-             <TableRow>
-            <StyledTableCell>Id</StyledTableCell>
-            <StyledTableCell align="right">First Name</StyledTableCell>
-            <StyledTableCell align="right">Last Name</StyledTableCell>
-            <StyledTableCell align="right">Age</StyledTableCell>
-            <StyledTableCell align="right">Email</StyledTableCell>
-            <StyledTableCell align="right">State</StyledTableCell>
-            <StyledTableCell align="right">City</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {
-          data
-          .map((row, index) => (
-            row ? (<StyledTableRow
-                    key={index}
-                              >
-              <StyledTableCell component="th" scope="row">
-                {index+1}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.firstname}</StyledTableCell>
-              <StyledTableCell align="right">{row.lastname}</StyledTableCell>
-              <StyledTableCell align="right">{row.age}</StyledTableCell>
-              <StyledTableCell align="right">{row.email}</StyledTableCell>
-              <StyledTableCell align="right">{row.state}</StyledTableCell>
-              <StyledTableCell align="right">{row.city}</StyledTableCell>
-              <StyledTableCell align="right">
-              {<Chip 
-                    label="remove"
-                    onDelete={()=>{
-                      onDelete(index)
-                    }}
-                    variant="outlined"
-                    size="small"
-                    color='error'
-                    deleteIcon={<RemoveCircleOutlineOutlinedIcon/>}
-                    /> }
-              </StyledTableCell>
-              
-              
-
-            </StyledTableRow>) : null
-           
-          ))}
-          
-        </TableBody>
-  
-          </Table>
-         
-        </TableContainer>
-        
-        <Button variant="contained" onClick={handleAddRow}>
-          Add Row
+             <Button 
+             variant="contained" 
+             onClick={handleAddRow} 
+             className="add-button" 
+             startIcon={<AddCircleOutlineIcon/>}
+             >
+              add
         </Button>
 
         <Dialog open={showForm} onClose={handleCloseForm}>
@@ -245,6 +208,65 @@ const  onDelete = (index)=> {
           </DialogActions>
           </DialogContent>
         </Dialog>
+          
+             <TableRow>
+            <StyledTableCell>Id</StyledTableCell>
+            <StyledTableCell align="right">First Name</StyledTableCell>
+            <StyledTableCell align="right">Last Name</StyledTableCell>
+            <StyledTableCell align="right">Age</StyledTableCell>
+            <StyledTableCell align="right">Email</StyledTableCell>
+            <StyledTableCell align="right">State</StyledTableCell>
+            <StyledTableCell align="right">City</StyledTableCell>
+         
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {
+          data
+          .map((row, index) => {
+            
+            return (
+              row ? (<StyledTableRow
+                    key={index}
+                              >
+              <StyledTableCell component="th" scope="row">
+                {index+1}
+              </StyledTableCell>
+              <StyledTableCell align="right">{row.firstname}</StyledTableCell>
+              <StyledTableCell align="right">{row.lastname}</StyledTableCell>
+              <StyledTableCell align="right">{row.age}</StyledTableCell>
+              <StyledTableCell align="right">{row.email}</StyledTableCell>
+              <StyledTableCell align="right">{row.state}</StyledTableCell>
+              <StyledTableCell align="right">{row.city}</StyledTableCell>
+              <StyledTableCell align="right">
+              {<Chip 
+                    label="remove"
+                    onDelete={()=>{
+                      onDelete(index)
+                    }}
+                    variant="outlined"
+                    size="small"
+                    color='error'
+                    deleteIcon={<RemoveCircleOutlineOutlinedIcon/>}
+                    /> }
+              </StyledTableCell>
+              
+            </StyledTableRow>) : null
+           
+                  )
+                })
+                  
+                  }
+
+
+          
+        </TableBody>
+  
+          </Table>
+         
+        </TableContainer>
+        
+        
       </Container> }
 
    </div>
